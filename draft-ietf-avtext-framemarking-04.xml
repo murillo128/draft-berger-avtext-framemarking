@@ -257,14 +257,15 @@
 
     </section>
     <section title="VP9 LID Mapping">
-	 <t> The following  shows VP9 Layer encoding information (4 bits for
-	 spatial and quality, 3 bits for temporal layer) mapped to the generic LID and TID fields.</t>
+	 <t> The following  shows VP9 Layer encoding information (3 bits for
+	 spatial and temporal layer) mapped to the generic LID and TID fields.</t>
+	 <t>The P and U bits MUST match the corresponding bits in the VP9 Payload Description.</t>
       <figure>
           <artwork><![CDATA[
  0                   1                   2                   3
  0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
-|  ID=2 |  L=2  |S|E|I|D|B| TID |0|0|0|0| RS| RQ|    TL0PICIDX  |
+|  ID=2 |  L=2  |S|E|I|D|B| TID |0|0|0|P|U| SID |    TL0PICIDX  |
 +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
 ]]></artwork></figure>
     </section>
